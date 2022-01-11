@@ -111,6 +111,20 @@ if( t2.getType() == 'trap' ) {
 }
 ```
 
+## Highlight Mines and enjoy the maze
+Highlight the doors that lead to a mine and you'll never die. Just play the maze then (I've seen sometimes there's no possible solution. So why bother code a solution to find one?). 
+```javascript
+if(t1.getType()=='teleporter' && t2.getType()=='trap')
+{
+	map.setSquareColor(t1.getX(), t1.getY(), '#f00');
+}
+
+if(t2.getType()=='teleporter' && t1.getType()=='trap')
+{
+	map.setSquareColor(t2.getX(), t2.getY(), '#f00');
+}
+```
+
 ## Redefine shuffle
 
 not shuffling for real 
